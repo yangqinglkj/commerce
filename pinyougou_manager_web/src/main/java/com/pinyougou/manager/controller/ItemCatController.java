@@ -75,31 +75,9 @@ public class ItemCatController {
 		}
 	}
 
-	/**
-	 * 修改
-	 * @param itemCat
-	 * @return
-	 */
-	@RequestMapping("/update2")
-	public Result update2(@RequestBody TbItemCat itemCat){
-		try {
-			itemCatService.update(itemCat);
-			return new Result(true, "修改成功");
-		} catch (Exception e) {
-			e.printStackTrace();
-			return new Result(false, "修改失败");
-		}
-	}
-	@RequestMapping("/update3")
-	public Result update3(@RequestBody TbItemCat itemCat){
-		try {
-			itemCatService.update(itemCat);
-			return new Result(true, "修改成功");
-		} catch (Exception e) {
-			e.printStackTrace();
-			return new Result(false, "修改失败");
-		}
-	}
+
+
+
 	/**
 	 * 获取实体
 	 * @param id

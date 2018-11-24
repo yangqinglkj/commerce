@@ -30,6 +30,15 @@ public class GoodsController {
 	public List<TbGoods> findAll(){			
 		return goodsService.findAll();
 	}
+
+	/**
+	 * 返回全部列表
+	 * @return
+	 */
+	@RequestMapping("/findAll1")
+	public List<TbGoods> findAll1(){
+		return goodsService.findAll();
+	}
 	
 	
 	/**
@@ -96,5 +105,15 @@ public class GoodsController {
 	public PageResult search(@RequestBody TbGoods goods, int page, int rows  ){
 		return goodsService.findPage(goods, page, rows);		
 	}
-	
+
+
+	/**
+	 * 获取实体
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping("/findOne2")
+	public TbGoods findOne2(Long id){
+		return goodsService.findOne(id);
+	}
 }

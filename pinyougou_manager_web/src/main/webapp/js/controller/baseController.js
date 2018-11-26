@@ -17,7 +17,7 @@ app.controller("baseController", function ($scope) {
 
     //用户勾选复选框
     $scope.selectIds = [];//用户勾选的id集合
-    $scope.deleteBrand = function ($event, id) {
+    $scope.updateBrand = function ($event, id) {
         if ($event.target.checked) {
             $scope.selectIds.push(id);//push向集合里添加id
         } else {

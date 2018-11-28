@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pinyougou-shop-web" />
+        <module name="pinyougou_common" />
+        <module name="pinyougou_content_interface" />
+        <module name="pinyougou_content_service" />
+        <module name="pinyougou_dao" />
+        <module name="pinyougou_manager_web" />
+        <module name="pinyougou_pojo" />
+        <module name="pinyougou_portal_web" />
+        <module name="pinyougou_search_interface" />
+        <module name="pinyougou_search_service" />
+        <module name="pinyougou_search_web" />
+        <module name="pinyougou_sellergoods_interface" />
+        <module name="pinyougou_sellergoods_service" />
+        <module name="pinyougou_shop_web" />
+        <module name="pinyougou_solr_utils" />
+        <module name="SpringDateSolr" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="asdf" target="1.7" />
+      <module name="commerce" target="1.7" />
+      <module name="pinyougou-shop-web" target="1.7" />
+      <module name="pinyougou_common" target="1.7" />
+      <module name="pinyougou_content_interface" target="1.7" />
+      <module name="pinyougou_content_service" target="1.7" />
+      <module name="pinyougou_dao" target="1.7" />
+      <module name="pinyougou_manager_web" target="1.7" />
+      <module name="pinyougou_parent" target="1.7" />
+      <module name="pinyougou_pojo" target="1.7" />
+      <module name="pinyougou_portal_web" target="1.7" />
+      <module name="pinyougou_search_interface" target="1.7" />
+      <module name="pinyougou_search_service" target="1.7" />
+      <module name="pinyougou_search_web" target="1.7" />
+      <module name="pinyougou_sellergoods_interface" target="1.7" />
+      <module name="pinyougou_sellergoods_service" target="1.7" />
+      <module name="pinyougou_shop_web" target="1.7" />
+      <module name="pinyougou_solr_util" target="1.7" />
+      <module name="pinyougou_solr_utils" target="1.7" />
+      <module name="SpringDateSolr" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

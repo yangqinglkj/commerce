@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../SpringDateSolr/SpringDateSolr.iml" filepath="$PROJECT_DIR$/../SpringDateSolr/SpringDateSolr.iml" />
-      <module fileurl="file://$PROJECT_DIR$/commerce.iml" filepath="$PROJECT_DIR$/commerce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/commerce.iml" filepath="$PROJECT_DIR$/.idea/commerce.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_common/pinyougou_common.iml" filepath="$PROJECT_DIR$/pinyougou_common/pinyougou_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_content_interface/pinyougou_content_interface.iml" filepath="$PROJECT_DIR$/pinyougou_content_interface/pinyougou_content_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" filepath="$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" />

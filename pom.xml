@@ -22,6 +22,10 @@
         <module>pinyougou_search_interface</module>
         <module>pinyougou_search_service</module>
         <module>pinyougou_search_web</module>
+        <module>FreemarkerDemo</module>
+        <module>pinyougou_page_interface</module>
+        <module>pinyougou_page_service</module>
+        <module>pinyougou_page_web</module>
     </modules>
     <packaging>pom</packaging>
 

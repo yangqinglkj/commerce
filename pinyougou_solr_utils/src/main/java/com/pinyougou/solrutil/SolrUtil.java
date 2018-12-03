@@ -28,7 +28,7 @@ public class SolrUtil {
         List<TbItem> itemList = itemMapper.selectByExample(example);
         System.out.println("===商品列表===");
         for(TbItem item:itemList){
-            System.out.println(item.getTitle()+" "+item.getPrice()+" "+item.getSellerId());
+            System.out.println(item.getTitle()+" "+item.getPrice()+" "+item.getSellerId()+"时间："+item.getUpdateTime());
             //从数据库中提取规格字符串转换为map
             Map map = JSON.parseObject(item.getSpec(), Map.class);
             item.setSpecMap(map);
@@ -44,4 +44,8 @@ public class SolrUtil {
         SolrUtil solrUtil = (SolrUtil) context.getBean("solrUtil");
         solrUtil.importItemData();
     }
+
+
+
+
 }

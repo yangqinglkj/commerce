@@ -114,32 +114,38 @@ app.controller('goodsController' ,function($scope,$controller,goodsService,itemC
     };
     //查询二级商品分类列表
     $scope.$watch("entity.goods.category1Id", function (newValue, oldValue) {
-        itemCatService.findByParentId(newValue).success(
-            function (response) {
-                $scope.itemCat2List = response;
-                $scope.itemCat3List = {};
-            }
-        )
+        if (newValue!== undefined) {
+            itemCatService.findByParentId(newValue).success(
+                function (response) {
+                    $scope.itemCat2List = response;
+                    $scope.itemCat3List = {};
+                }
+            )
+        }
 
     });
 
     //查询三级商品分类列表  $watch:监控变量
     $scope.$watch("entity.goods.category2Id", function (newValue, oldValue) {
-        itemCatService.findByParentId(newValue).success(
-            function (response) {
-                $scope.itemCat3List = response;
-            }
-        )
+        if (newValue !== undefined) {
+            itemCatService.findByParentId(newValue).success(
+                function (response) {
+                    $scope.itemCat3List = response;
+                }
+            )
+        }
 
     });
 
     //读取模板id
     $scope.$watch("entity.goods.category3Id", function (newValue, oldValue) {
-        itemCatService.findOne(newValue).success(
-            function (response) {
-                $scope.entity.goods.typeTemplateId = response.typeId;
-            }
-        )
+        if (newValue !== undefined) {
+            itemCatService.findOne(newValue).success(
+                function (response) {
+                    $scope.entity.goods.typeTemplateId = response.typeId;
+                }
+            )
+        }
     });
 
     $scope.status=["未审核","已审核","审核未通过","关闭"];//商品状态 0 1 2 3

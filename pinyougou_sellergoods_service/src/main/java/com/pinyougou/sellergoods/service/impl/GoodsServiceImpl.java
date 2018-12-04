@@ -98,7 +98,7 @@ public class GoodsServiceImpl implements GoodsService {
             TbItem item = new TbItem();
             item.setTitle(goods.getGoods().getGoodsName());//标题
             item.setPrice(goods.getGoods().getPrice());//价格
-            item.setNum(99999);//库存数量
+            item.setNum(999);//库存数量
             item.setStatus("1");//状态
             item.setIsDefault("1");//默认状态
             item.setSpec("{}");//规格

@@ -18,18 +18,32 @@
 	<!-- 目标ConnectionFactory对应真实的可以产生JMS Connection的ConnectionFactory -->  
 	    <property name="targetConnectionFactory" ref="targetConnectionFactory"/>  
 	</bean>  
-	
-    <!--这个是队列目的地，点对点的  文本信息-->  
+	<!--
+    &lt;!&ndash;这个是队列目的地，点对点的  文本信息&ndash;&gt;
 	<bean id="queueTextDestination" class="org.apache.activemq.command.ActiveMQQueue">  
 	    <constructor-arg value="queue_text"/>  
 	</bean>    
 	
+	&lt;!&ndash; 我的监听类 &ndash;&gt;
+	<bean id="myMessageListener" class="cn.itcast.demo.MyMessageListener"></bean>
+	&lt;!&ndash; 消息监听容器 &ndash;&gt;
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="queueTextDestination" />
+		<property name="messageListener" ref="myMessageListener" />
+	</bean>-->
+
+	<!--这个是队列目的地，点对点的  文本信息-->
+	<bean id="smsDestination" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="sms"/>
+	</bean>
+
 	<!-- 我的监听类 -->
 	<bean id="myMessageListener" class="cn.itcast.demo.MyMessageListener"></bean>
 	<!-- 消息监听容器 -->
 	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
 		<property name="connectionFactory" ref="connectionFactory" />
-		<property name="destination" ref="queueTextDestination" />
+		<property name="destination" ref="smsDestination" />
 		<property name="messageListener" ref="myMessageListener" />
 	</bean>
 	

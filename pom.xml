@@ -22,13 +22,16 @@
         <module>pinyougou_search_interface</module>
         <module>pinyougou_search_service</module>
         <module>pinyougou_search_web</module>
-        <module>FreemarkerDemo</module>
+        <!--<module>FreemarkerDemo</module>-->
         <module>pinyougou_page_interface</module>
         <module>pinyougou_page_service</module>
         <module>pinyougou_page_web</module>
-        <module>jmsDemo</module>
-        <module>springjsm_producer</module>
-        <module>springjsm_consumer</module>
+        <!--<module>jmsDemo</module>-->
+        <!--<module>springjsm_producer</module>-->
+        <!--<module>springjsm_consumer</module>-->
+        <module>pinyougou_user_interface</module>
+        <module>pinyougou_user_service</module>
+        <module>pinyougou_user_web</module>
     </modules>
     <packaging>pom</packaging>
 

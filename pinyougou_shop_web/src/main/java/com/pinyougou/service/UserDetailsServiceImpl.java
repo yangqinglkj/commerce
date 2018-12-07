@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 认证类
+ * 用户认证类
  */
 public class UserDetailsServiceImpl implements UserDetailsService {
 

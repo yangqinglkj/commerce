@@ -329,7 +329,7 @@
 							<div class="fl suits">
 								<ul class="suit-list">
 									<li class="">
-										<div id="">
+										<div >
 											<img src="img/_/dp01.png" />
 										</div>
 										<i>Feless费勒斯VR</i>
@@ -338,21 +338,21 @@
   </label>
 									</li>
 									<li class="">
-										<div id=""><img src="img/_/dp02.png" /> </div>
+										<div ><img src="img/_/dp02.png" /> </div>
 										<i>Feless费勒斯VR</i>
 										<label data-toggle="checkbox" class="checkbox-pretty">
     <input type="checkbox"><span>50</span>
   </label>
 									</li>
 									<li class="">
-										<div id=""><img src="img/_/dp03.png" /></div>
+										<div ><img src="img/_/dp03.png" /></div>
 										<i>Feless费勒斯VR</i>
 										<label data-toggle="checkbox" class="checkbox-pretty">
     <input type="checkbox"><span>59</span>
   </label>
 									</li>
 									<li class="">
-										<div id=""><img src="img/_/dp04.png" /></div>
+										<div ><img src="img/_/dp04.png" /></div>
 										<i>Feless费勒斯VR</i>
 										<label data-toggle="checkbox" class="checkbox-pretty">
     <input type="checkbox"><span>99</span>

@@ -1,4 +1,4 @@
-app.controller("itemController",function ($scope) {
+app.controller("itemController",function ($scope,$http) {
 
 	//购物车数量的加减
 	$scope.addNum=function(x){
@@ -13,7 +13,7 @@ app.controller("itemController",function ($scope) {
 	$scope.selectSpecification=function (key,value) {
 		$scope.specificationItems[key]=value;
 		searchSku();
-	}
+	};
 	//判断规格是否被选中
 	$scope.isSelected=function (key,value) {
 		if($scope.specificationItems[key]==value){
@@ -21,14 +21,14 @@ app.controller("itemController",function ($scope) {
 		}else{
 			return false;
 		}
-	}
+	};
 	
-	$scope.sku={}//当前的sku
+	$scope.sku={};//当前的sku
 	//加载默认的SKU
 	$scope.loadSku = function(){
 		$scope.sku=skuList[0];
 		$scope.specificationItems=JSON.parse(JSON.stringify($scope.sku.spec));//深克隆
-	}
+	};
 	
 	//匹配两个对象是否相等
 	matchObject = function(map1,map2){
@@ -44,7 +44,7 @@ app.controller("itemController",function ($scope) {
 		}
 		
 		return true;
-	}
+	};
 	//根据规格查找SKU
 	searchSku=function(){
 		for (var i = 0; i < skuList.length; i++) {
@@ -56,10 +56,20 @@ app.controller("itemController",function ($scope) {
 			
 		}
 		$scope.sku={id:0,title:'----',price:0};
-	}
+	};
 	//添加商品到购物车
 	$scope.addToCart = function(){
-		alert("SKUID:"+$scope.sku.id);
+		// alert("SKUID:"+$scope.sku.id);
+		//{'withCredentials':true} 跨域允许cookie操作
+		$http.get("http://localhost:9107/cart/addGoodsToCartList.do?itemId="+$scope.sku.id+"&num="+$scope.num,{'withCredentials':true}).success(
+			function (response) {
+				if(response.success){
+					location.href="http://localhost:9107/cart.html";
+				}else{
+					alert(response.message)
+				}
+            }
+		)
 	}
 	
 }); 
